@@ -3,6 +3,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<CalcService>();
+builder.Services.AddTransient<TimeService>();
 
 var app = builder.Build();
 
@@ -29,5 +30,8 @@ app.MapControllerRoute(
     name:"calc",
     pattern: "{controller=CalcController}/{action=Index}/{id?}");
 
+app.MapControllerRoute(
+    name:"time",
+    pattern: "{controller=TimeController}/{action=Index}/{id?}");
 
 app.Run();

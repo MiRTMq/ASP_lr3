@@ -1,14 +1,15 @@
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace Services_lr3.Controllers;
 
-public class CalcController : Controller {
-  private readonly CalcService _calcService;
+public class TimeController : Controller {
+  private readonly TimeService _timeService;
 
-  public CalcController(CalcService calcService) { _calcService = calcService; }
+  public TimeController(TimeService timeService) { _timeService = timeService; }
   [HttpGet]
   public IActionResult Index(){
-return View(new CalcModel());
+    return Ok(_timeService.GetTimeOfDay());
   }
 
   [HttpPost]
