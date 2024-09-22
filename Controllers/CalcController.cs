@@ -7,6 +7,28 @@ public class CalcController : Controller {
   private readonly CalcService _calcService;
 
   public CalcController(CalcService calcService) { _calcService = calcService; }
-  [HttpGet("Calc/Add")]
-  public IActionResult Add(int a, int b) {return Ok(_calcService.add(a,b)) ; }
+  [HttpGet]
+  public IActionResult Index(){
+return View(new CalcModel());
+  }
+
+  [HttpPost]
+
+  public IActionResult Index(CalcModel calc, string command) {
+    switch (command) {
+    case "add":
+      calc.Result = calc.NumberA + calc.NumberB;
+      break;
+    case "sub":
+      calc.Result = calc.NumberA - calc.NumberB;
+      break;
+    case "mul":
+      calc.Result = calc.NumberA * calc.NumberB;
+      break;
+    case "div":
+      calc.Result = calc.NumberA / calc.NumberB;
+      break;
+    }
+    return View(calc);
+  }
 }
