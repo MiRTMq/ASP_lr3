@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5YzPpJcqdp3fPNmNMUdv/ZssmQYrBljtUQM+glTcvayoFo8mfYyU3zfw2Cwtyf+NK9aRdJMuLyk9NtIyw9Nhbw==",
+  "success": true,
+  "projectFilePath": "/home/n7a/Desktop/3/asp/projects/Services_lr3/Services_lr3.csproj",
+  "expectedPackageFiles": [
+    "/home/n7a/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.8/microsoft.aspnetcore.app.ref.8.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
