@@ -1,5 +1,5 @@
 # ASP_lr3
-Servises, dependency injection
+Services, dependency injection
 
 ---
 
